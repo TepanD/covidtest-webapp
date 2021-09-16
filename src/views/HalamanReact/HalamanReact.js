@@ -14,7 +14,7 @@ const HalamanReact = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Test 123
+          Ini nyobain conflict resolve
         </a>
       </header>
     </div>
