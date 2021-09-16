@@ -14,7 +14,7 @@ const HalamanReact = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Heelo Wolrd! 
+          Test 123
         </a>
       </header>
     </div>
