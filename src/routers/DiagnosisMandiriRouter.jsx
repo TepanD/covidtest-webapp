@@ -5,7 +5,11 @@ import * as DiagnosisMandiri from "../views/DiagnosisMandiri";
 const DiagnosisMandiriRouter = () => {
   return (
     <Switch>
-      <Route path="/" exact component={DiagnosisMandiri.StartPage} />
+      <Route
+        path="/diagnosis-mandiri/halaman-satu"
+        exact
+        component={DiagnosisMandiri.StartPage}
+      />
     </Switch>
   );
 };
