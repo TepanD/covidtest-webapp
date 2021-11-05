@@ -1,9 +1,10 @@
 import React from "react";
+import { QuestionContainer } from "../../../component/QuestionContainer";
 
 const StartPage = () => {
   return (
     <div>
-      <h1>Ini halaman pertama</h1>
+      <QuestionContainer question="test pertanyaan pertama" />
     </div>
   );
 };
