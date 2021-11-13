@@ -7,6 +7,7 @@ const QuestionFive = () => {
       <QuestionContainer
         question="Apakah Anda memiliki riwayat penyakit pneunomia?"
         nextRoute="/diagnosis-mandiri/question-six"
+        qNum="question_five"
       />
     </div>
   );

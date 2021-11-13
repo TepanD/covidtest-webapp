@@ -16,12 +16,12 @@ const Navbar = () => {
       <div className="navbar-navigation">
         <ul className="nav-content-container">
           <li>
-            <NavLink to="#" className="nav-btn">
+            <NavLink to="/diagnosis-mandiri" className="nav-btn">
               Diagnosis Mandiri
             </NavLink>
           </li>
           <li>
-            <NavLink to="#" className="nav-btn">
+            <NavLink to="/himbauan-prokes" className="nav-btn">
               Himbauan Prokes
             </NavLink>
           </li>

@@ -9,6 +9,13 @@ export const StyledButton = styled.button`
   background-color: #fff;
   margin: 2rem;
 
+  @media (max-width: 600px) {
+    margin: 1rem;
+  }
+  @media (max-width: 500px) {
+    margin: 0.5rem;
+  }
+
   &:hover {
     background-color: #f5f5f5;
     cursor: pointer;

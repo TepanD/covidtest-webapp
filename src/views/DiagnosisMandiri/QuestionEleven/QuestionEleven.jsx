@@ -7,6 +7,7 @@ const QuestionEleven = () => {
       <QuestionContainer
         question="Apakah Anda memiliki riwayat kontak dengan hewan yang sudah teridentifikasi terinfeksi Covid-19?"
         nextRoute="/diagnosis-mandiri/question-twelve"
+        qNum="question_eleven"
       />
     </div>
   );

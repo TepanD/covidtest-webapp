@@ -23,8 +23,34 @@
   padding: 1rem;
 }
 
+@media screen and (max-width: 720px) {
+  // * {
+  //   --question_fs: 1.5rem;
+  // }
+  .qc_outer_container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .qc_q_container {
+    min-width: 0px;
+  }
+}
+
 .qc_a_container {
   height: 100%;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 450px) {
+  .qc_outer_container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .qc_a_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }

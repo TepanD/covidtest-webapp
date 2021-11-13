@@ -1,0 +1,121 @@
+:root {
+  --question_fs: 1.8rem;
+}
+
+.sp_outer_container {
+  background: white;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0px 1.6px 6px rgba(0, 0, 0, 0.35);
+}
+
+.sp_q_container {
+  min-width: 500px;
+  max-width: 600px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: var(--question_fs);
+  text-align: center;
+  padding: 4rem 1rem 3rem 1rem;
+
+  & strong {
+    font-weight: 800;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  * {
+    --question_fs: 1.5rem;
+  }
+  .sp_outer_container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .sp_q_container {
+    min-width: 0px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .sp_q_container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  * {
+    --question_fs: 1.2rem;
+  }
+}
+
+.sp_a_container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sp_start_button {
+  width: 120px;
+  height: 120px;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 100%;
+  background: linear-gradient(
+    270deg,
+    #667db6 3.65%,
+    #0082c8 35.94%,
+    #0082c8 66.67%,
+    #667db6 94.79%
+  );
+  background-size: 200% 200%;
+  background-position: 100% 100%;
+
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    animation: button_hover 0.3s linear;
+    animation-iteration-count: 2;
+    background-position: 0% 0%;
+    box-shadow: 0px 2px 7px 3px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media screen and (max-width: 795px) {
+  .sp_start_button {
+    width: 100px;
+    height: 100px;
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .sp_start_button {
+    width: 80px;
+    height: 80px;
+    font-size: 1.15rem;
+  }
+}
+
+@keyframes button_hover {
+  0% {
+    outline: 10px solid #005d8f;
+    outline-offset: 0px;
+  }
+  50% {
+    outline-offset: 15px;
+  }
+  100% {
+    outline: 0px solid #005d8f;
+    outline-offset: 25px;
+  }
+}

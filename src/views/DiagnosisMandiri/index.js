@@ -11,3 +11,4 @@ export { QuestionNine } from "./QuestionNine";
 export { QuestionTen } from "./QuestionTen";
 export { QuestionEleven } from "./QuestionEleven";
 export { QuestionTwelve } from "./QuestionTwelve";
+export { DiagnosisResult } from "./DiagnosisResult";

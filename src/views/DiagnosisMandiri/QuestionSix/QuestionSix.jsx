@@ -7,6 +7,7 @@ const QuestionSix = () => {
       <QuestionContainer
         question="Apakah Anda memiliki riwayat imun tubuh lemah / immunocompromised / kelainan pada imun tubuh?"
         nextRoute="/diagnosis-mandiri/question-seven"
+        qNum="question_six"
       />
     </div>
   );

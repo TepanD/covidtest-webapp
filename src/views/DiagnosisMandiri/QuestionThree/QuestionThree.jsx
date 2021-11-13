@@ -7,6 +7,7 @@ const QuestionThree = () => {
       <QuestionContainer
         question="Apakah Anda memiliki gejala flu?"
         nextRoute="/diagnosis-mandiri/question-four"
+        qNum="question_three"
       />
     </div>
   );

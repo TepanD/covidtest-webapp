@@ -7,6 +7,7 @@ const QuestionTwo = () => {
       <QuestionContainer
         question="Apakah Anda memiliki gejala batuk-batuk?"
         nextRoute="/diagnosis-mandiri/question-three"
+        qNum="question_two"
       />
     </div>
   );

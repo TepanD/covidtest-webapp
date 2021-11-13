@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { StyledButton } from "../StyledButton/StyledButton";
 import "./QuestionContainer.scss";
 import { useHistory } from "react-router";
 
-const QuestionContainer = ({ question, nextRoute }) => {
+const QuestionContainer = ({ question, nextRoute, qNum }) => {
   const history = useHistory();
 
-  const handleClick = () => {
-    // window.location.href = nextRoute;
-    history.push(nextRoute);
+  useEffect(() => {
+    if (history.location.state === undefined) {
+      history.push("/diagnosis-mandiri");
+    }
+    document.title = "Diagnosis Mandiri";
+  }, []);
+
+  const questionAnswers = JSON.parse(
+    window.sessionStorage.getItem("diagnosis_answers")
+  );
+
+  const handleClick = (answer) => {
+    questionAnswers[qNum] = answer;
+    window.sessionStorage.setItem(
+      "diagnosis_answers",
+      JSON.stringify(questionAnswers)
+    );
+    history.push(nextRoute, { validation: true });
   };
 
   return (
@@ -18,8 +33,8 @@ const QuestionContainer = ({ question, nextRoute }) => {
         <p>{question}</p>
       </div>
       <div className="qc_a_container">
-        <StyledButton onClick={handleClick}>Ya</StyledButton>
-        <StyledButton>Tidak</StyledButton>
+        <StyledButton onClick={() => handleClick(true)}>Ya</StyledButton>
+        <StyledButton onClick={() => handleClick(false)}>Tidak</StyledButton>
       </div>
     </div>
   );
@@ -28,6 +43,7 @@ const QuestionContainer = ({ question, nextRoute }) => {
 QuestionContainer.propTypes = {
   question: PropTypes.string,
   nextRoute: PropTypes.string,
+  qNum: PropTypes.string,
 };
 
 export default QuestionContainer;

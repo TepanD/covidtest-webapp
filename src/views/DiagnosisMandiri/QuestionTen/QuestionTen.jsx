@@ -7,6 +7,7 @@ const QuestionTen = () => {
       <QuestionContainer
         question="Apakah Anda melakukan kontak dengan pasien yang terkonfirmasi atau terduga Covid-19 dalam waktu 14 hari sebelum gejala pertama?"
         nextRoute="/diagnosis-mandiri/question-eleven"
+        qNum="question_ten"
       />
     </div>
   );

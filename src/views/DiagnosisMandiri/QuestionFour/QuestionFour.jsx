@@ -7,6 +7,7 @@ const QuestionFour = () => {
       <QuestionContainer
         question="Apakah Anda merasakan sakit pada tenggorokan?"
         nextRoute="/diagnosis-mandiri/question-five"
+        qNum="question_four"
       />
     </div>
   );
