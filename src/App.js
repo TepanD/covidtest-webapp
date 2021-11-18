@@ -1,10 +1,14 @@
 import React from "react";
 import AppRouter from "./AppRouter";
+import "./GlobalStyling.scss";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   return (
     <>
-      <AppRouter />
+      <AnimatePresence>
+        <AppRouter />
+      </AnimatePresence>
     </>
   );
 }

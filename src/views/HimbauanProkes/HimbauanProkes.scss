@@ -1,0 +1,156 @@
+* {
+  color: #1f1f1f;
+}
+
+.hp_pg_header {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 87px;
+  letter-spacing: 0.012rem;
+
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hp_pg_subheader {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.card_outer_container {
+  background-color: #fff;
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 2rem 4rem;
+
+  box-shadow: 0px 3px 6px 1.2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  & .image_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.image_container > img {
+  width: 100%;
+  height: auto;
+}
+
+.card_outer_container_tiga {
+  background-color: #fff;
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 4rem 4rem;
+
+  box-shadow: 0px 3px 6px 1.2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  & .image_container {
+    width: 100%;
+  }
+}
+
+.card_desc_container {
+  margin-left: 50px;
+  margin-top: 2rem;
+}
+.card_desc_container_tiga {
+  margin-left: 50px;
+}
+
+.card_desc_header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.card_desc_detail {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .card_outer_container,
+  .card_outer_container_tiga {
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    padding: 1.5rem;
+    & .card_desc_container {
+      margin-top: 0;
+    }
+  }
+
+  .card_desc_header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .card_desc_detail {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .card_outer_container,
+  .card_outer_container_tiga {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    padding: 1.5rem;
+    & .card_desc_container {
+      margin-left: 25px;
+    }
+  }
+
+  .card_desc_header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .card_desc_detail {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .card_outer_container,
+  .card_outer_container_tiga {
+    & .card_desc_container,
+    .card_desc_container_tiga {
+      margin-left: 0;
+      text-align: center;
+    }
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card_desc_header {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .card_desc_detail {
+    font-size: 1.15rem;
+  }
+
+  .card_outer_container > .image_container {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card_outer_container_tiga > .image_container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+}

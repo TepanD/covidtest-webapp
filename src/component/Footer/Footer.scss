@@ -1,0 +1,14 @@
+.footer_outer_container {
+  width: 100%;
+  height: 65px;
+  background: #002c4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 0;
+  & > p {
+    color: #fff !important;
+  }
+}

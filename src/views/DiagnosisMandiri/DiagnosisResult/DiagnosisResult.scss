@@ -1,0 +1,58 @@
+.r_outer_container {
+  background: white;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0px 1.6px 6px rgba(0, 0, 0, 0.35);
+  color: #1f1f1f;
+  margin-bottom: 3rem;
+}
+
+.r_diagnosis_result {
+  border-bottom: 1.5px solid black;
+  padding: 1rem 0 1.5rem 0;
+  font-size: 1.6rem;
+}
+
+.r_description {
+  margin-bottom: 2rem;
+  & li:first-child {
+    margin-top: 1.5rem;
+  }
+  & li {
+    margin-left: 1rem;
+    margin-bottom: 8px;
+  }
+}
+
+.r_true_styling {
+  color: #006801;
+  display: flex;
+  align-items: center;
+}
+
+.r_false_styling {
+  color: #c90000;
+  display: flex;
+  align-items: center;
+  & > svg {
+    font-size: 0.8rem;
+    margin-left: 2px;
+  }
+}
+
+.r_inner_container {
+  padding: 1rem 2rem;
+  max-width: 650px;
+}
+
+.r_bttm_link {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 2rem;
+
+  & > a {
+    color: #0645ad;
+  }
+}
