@@ -51,4 +51,8 @@
   display: flex;
   justify-content: flex-end;
   margin: 1rem 2rem;
+
+  & > a {
+    color: #0645ad;
+  }
 }

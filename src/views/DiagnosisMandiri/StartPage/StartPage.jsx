@@ -47,15 +47,13 @@ const StartPage = () => {
   const slideVariant = {
     rest: { y: -200, opacity: 0 },
     enter: { y: 0, opacity: 1, transition: { delay: 0.2, ...transition } },
-    exit: { y: -200, opacity: 0, transition: { delay: 1, ...transition } },
+    exit: { y: -90, opacity: 0, transition: { delay: 0.15, ...transition } },
   };
 
   return (
     <div>
       <motion.div
         className="sp_outer_container"
-        initial="rest"
-        animate="enter"
         exit="exit"
         variants={slideVariant}
       >

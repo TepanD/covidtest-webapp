@@ -1,19 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./DiagnosisResult.scss";
 import { Icon } from "@iconify/react";
 
 const DiagnosisResult = () => {
+  const [result, setResult] = useState("");
   const questionAnswers = JSON.parse(
     window.sessionStorage.getItem("diagnosis_answers")
   );
+
+  useEffect(() => {
+    if (
+      questionAnswers["question_one"] &&
+      questionAnswers["question_three"] &&
+      questionAnswers["question_seven"]
+    ) {
+      setResult("ODP");
+    } else if (
+      questionAnswers["question_one"] &&
+      (questionAnswers["question_two"] ||
+        questionAnswers["question_three"] ||
+        questionAnswers["question_four"]) &&
+      questionAnswers["question_five"]
+    ) {
+      setResult("PDP");
+    } else if (
+      (questionAnswers["question_one"] &&
+        (questionAnswers["question_two"] ||
+          questionAnswers["question_three"] ||
+          questionAnswers["question_four"]) &&
+        questionAnswers["question_six"]) ||
+      questionAnswers["question_eight"]
+    ) {
+      setResult("PDP");
+    } else if (
+      questionAnswers["question_nine"] &&
+      (questionAnswers["question_ten"] ||
+        questionAnswers["question_eight"] ||
+        questionAnswers["question_twelve"] ||
+        (questionAnswers["question_seven"] && questionAnswers["question_one"]))
+    ) {
+      setResult("PDP");
+    } else {
+      setResult(" ");
+    }
+  }, []);
 
   return (
     <div className="r_outer_container">
       <div className="r_inner_container">
         <p className="r_diagnosis_result">
-          Berdasarkan hasil diagnosis, Anda termasuk kategori{" "}
-          <strong>OTG</strong> (Orang Tanpa Gejala)
+          Berdasarkan hasil diagnosis, Anda
+          {result === "ODP" ? (
+            <span>
+              termasuk kategori <strong>ODP</strong> (Orang Dalam Pengawasan)
+            </span>
+          ) : result === "PDP" ? (
+            <span>
+              termasuk kategori <strong>PDP</strong> (Pasien Dalam Pengawasan)
+            </span>
+          ) : (
+            <span>tidak perlu pengawasan</span>
+          )}
         </p>
         {/* <hr/> */}
         <ul className="r_description">

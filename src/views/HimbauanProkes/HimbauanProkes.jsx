@@ -5,7 +5,9 @@ import "./HimbauanProkes.scss";
 const FirstCard = () => {
   return (
     <div className="card_outer_container">
-      <img src={ilustrasiSatu} alt={"ilustrasi masker"} />
+      <div className="image_container">
+        <img src={ilustrasiSatu} alt={"ilustrasi masker"} />
+      </div>
       <div className="card_desc_container">
         <div className="card_desc_header">
           <h3>Pakailah masker!</h3>
@@ -25,7 +27,9 @@ const FirstCard = () => {
 const SecondCard = () => {
   return (
     <div className="card_outer_container">
-      <img src={ilustrasiDua} alt={"ilustrasi masker"} />
+      <div className="image_container">
+        <img src={ilustrasiDua} alt={"ilustrasi cuci tangan"} />
+      </div>
       <div className="card_desc_container">
         <div className="card_desc_header">
           <h3>Cuci tanganmu!</h3>
@@ -45,7 +49,9 @@ const SecondCard = () => {
 const ThirdCard = () => {
   return (
     <div className="card_outer_container_tiga">
-      <img src={ilustrasiTiga} alt={"ilustrasi masker"} />
+      <div className="image_container">
+        <img src={ilustrasiTiga} alt={"ilustrasi masker"} />
+      </div>
       <div className="card_desc_container_tiga">
         <div className="card_desc_header">
           <h3>

@@ -1,4 +1,3 @@
-// import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { Route, Switch } from "react-router";
 import * as DiagnosisMandiri from "../views/DiagnosisMandiri";
