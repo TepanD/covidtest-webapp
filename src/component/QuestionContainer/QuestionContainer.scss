@@ -1,6 +1,5 @@
 .qc_outer_container {
   background: white;
-  //   width: 600px;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -9,7 +8,6 @@
 }
 
 .qc_q_container {
-  //   padding: 3rem;
   min-height: 200px;
   min-width: 500px;
   max-width: 500px;
@@ -24,9 +22,6 @@
 }
 
 @media screen and (max-width: 720px) {
-  // * {
-  //   --question_fs: 1.5rem;
-  // }
   .qc_outer_container {
     margin-left: 2rem;
     margin-right: 2rem;
