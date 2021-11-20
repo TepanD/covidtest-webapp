@@ -15,6 +15,7 @@ const AppRouter = () => {
         <Route path="/diagnosis-mandiri/:path1?" exact>
           <div
             style={{
+              position: "relative",
               minHeight: "100vh",
               backgroundColor: "#D0E6FB",
               paddingBottom: "120px",
