@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ilustrasiDua, ilustrasiSatu, ilustrasiTiga } from "../../assets";
 import "./HimbauanProkes.scss";
 
@@ -70,6 +70,9 @@ const ThirdCard = () => {
 };
 
 const HimbauanProkes = () => {
+  useEffect(() => {
+    document.title = "Himbauan Prokes";
+  }, []);
   return (
     <div>
       <h2 className="hp_pg_header">Protokol Kesehatan</h2>
