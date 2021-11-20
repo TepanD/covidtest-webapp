@@ -10,9 +10,7 @@ const DiagnosisResult = () => {
   );
 
   useEffect(() => {
-    useEffect(() => {
-      document.title = "Hasil Diagnosis";
-    }, []);
+    document.title = "Hasil Diagnosis";
 
     if (
       questionAnswers["question_one"] &&

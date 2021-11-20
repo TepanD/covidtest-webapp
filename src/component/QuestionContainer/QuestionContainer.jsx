@@ -23,7 +23,6 @@ const QuestionContainer = ({ question, nextRoute, qNum }) => {
     if (history.location.state === undefined) {
       history.push("/diagnosis-mandiri");
     }
-    console.log(history.location.state);
     document.title = "Diagnosis Mandiri";
   }, []);
 
