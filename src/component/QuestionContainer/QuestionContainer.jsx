@@ -23,7 +23,7 @@ const QuestionContainer = ({ question, nextRoute, qNum }) => {
     if (history.location.state === undefined) {
       history.push("/diagnosis-mandiri");
     }
-    document.title = "Diagnosis Mandiri";
+    document.title = "Diagnosis Mandiri - Covid Test App";
   }, []);
 
   const questionAnswers = JSON.parse(

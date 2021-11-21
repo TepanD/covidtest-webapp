@@ -71,7 +71,7 @@ const ThirdCard = () => {
 
 const HimbauanProkes = () => {
   useEffect(() => {
-    document.title = "Himbauan Prokes";
+    document.title = "Himbauan Prokes - Covid Test App";
   }, []);
   return (
     <div>
