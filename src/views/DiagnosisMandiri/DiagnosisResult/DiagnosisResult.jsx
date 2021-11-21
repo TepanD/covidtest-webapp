@@ -10,9 +10,24 @@ const DiagnosisResult = () => {
   );
 
   useEffect(() => {
-    document.title = "Hasil Diagnosis";
+    document.title = "Hasil Diagnosis - Covid Test App";
 
     if (
+      questionAnswers["question_one"] &&
+      questionAnswers["question_two"] &&
+      questionAnswers["question_three"] &&
+      questionAnswers["question_four"] &&
+      questionAnswers["question_five"] &&
+      questionAnswers["question_six"] &&
+      questionAnswers["question_seven"] &&
+      questionAnswers["question_eight"] &&
+      questionAnswers["question_nine"] &&
+      questionAnswers["question_ten"] &&
+      questionAnswers["question_eleven"] &&
+      questionAnswers["question_twelve"]
+    ) {
+      setResult("PDP");
+    } else if (
       questionAnswers["question_one"] &&
       questionAnswers["question_three"] &&
       questionAnswers["question_seven"]
@@ -44,7 +59,7 @@ const DiagnosisResult = () => {
     ) {
       setResult("PDP");
     } else {
-      setResult(" ");
+      setResult("");
     }
   }, []);
 
@@ -55,14 +70,17 @@ const DiagnosisResult = () => {
           Berdasarkan hasil diagnosis, Anda
           {result === "ODP" ? (
             <span>
-              termasuk kategori <strong>ODP</strong> (Orang Dalam Pengawasan)
+              termasuk kategori <strong>ODP</strong> (Orang Dalam Pemantauan)
             </span>
           ) : result === "PDP" ? (
             <span>
               termasuk kategori <strong>PDP</strong> (Pasien Dalam Pengawasan)
             </span>
           ) : (
-            <span>tidak perlu pengawasan</span>
+            <span>
+              {" "}
+              <strong>tidak memerlukan pengawasan</strong>
+            </span>
           )}
         </p>
         {/* <hr/> */}

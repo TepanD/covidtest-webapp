@@ -7,7 +7,7 @@ const StartPage = () => {
   const history = useHistory();
 
   useEffect(() => {
-    document.title = "Mulai Diagnosis Mandiri";
+    document.title = "Mulai Diagnosis Mandiri - Covid Test App";
   }, []);
 
   const handleClick = () => {
