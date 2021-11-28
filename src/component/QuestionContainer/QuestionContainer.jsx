@@ -36,7 +36,11 @@ const QuestionContainer = ({ question, nextRoute, qNum }) => {
       "diagnosis_answers",
       JSON.stringify(questionAnswers)
     );
-    history.push(nextRoute, { validation: true });
+    if (nextRoute === "/diagnosis-mandiri/result") {
+      history.push(nextRoute, { validation_result: true });
+    } else {
+      history.push(nextRoute, { validation: true });
+    }
   };
 
   return (
