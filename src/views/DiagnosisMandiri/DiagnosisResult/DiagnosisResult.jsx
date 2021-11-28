@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import "./DiagnosisResult.scss";
 import { Icon } from "@iconify/react";
 
 const DiagnosisResult = () => {
+  const history = useHistory();
   const [result, setResult] = useState("");
   const questionAnswers = JSON.parse(
     window.sessionStorage.getItem("diagnosis_answers")
@@ -12,7 +13,26 @@ const DiagnosisResult = () => {
   useEffect(() => {
     document.title = "Hasil Diagnosis - Covid Test App";
 
+    if (window.sessionStorage.getItem("diagnosis_answers") === null) {
+      history.push("/diagnosis-mandiri");
+    }
+
     if (
+      questionAnswers["question_one"] === "" ||
+      questionAnswers["question_two"] === "" ||
+      questionAnswers["question_three"] === "" ||
+      questionAnswers["question_four"] === "" ||
+      questionAnswers["question_five"] === "" ||
+      questionAnswers["question_six"] === "" ||
+      questionAnswers["question_seven"] === "" ||
+      questionAnswers["question_eight"] === "" ||
+      questionAnswers["question_nine"] === "" ||
+      questionAnswers["question_ten"] === "" ||
+      questionAnswers["question_eleven"] === "" ||
+      questionAnswers["question_twelve"]
+    ) {
+      history.push("/diagnosis-mandiri");
+    } else if (
       questionAnswers["question_one"] &&
       questionAnswers["question_two"] &&
       questionAnswers["question_three"] &&
@@ -70,10 +90,12 @@ const DiagnosisResult = () => {
           Berdasarkan hasil diagnosis, Anda
           {result === "ODP" ? (
             <span>
+              {" "}
               termasuk kategori <strong>ODP</strong> (Orang Dalam Pemantauan)
             </span>
           ) : result === "PDP" ? (
             <span>
+              {" "}
               termasuk kategori <strong>PDP</strong> (Pasien Dalam Pengawasan)
             </span>
           ) : (
